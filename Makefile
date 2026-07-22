@@ -10,6 +10,9 @@ build:
 run:
 	${build_dir}/app
 
+.PHONY: dev
+dev: build run
+
 .PHONY: clean
 clean: confirm
 	@echo "Cleaning build artifacts..."
