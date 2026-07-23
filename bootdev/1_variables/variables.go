@@ -57,8 +57,9 @@ func sameLineDeclaration() {
 	fmt.Println("someNum:", someNum, "someString:", someString)
 }
 
-func Variables_main() {
+func VariablesMain() {
 	fmt.Println("===== 1_Variables =====")
+
 	variables_1()
 	variables_2()
 	variables_3()
