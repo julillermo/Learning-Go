@@ -9,6 +9,7 @@ import (
 	functions "github.com/julillermo/Learning-Go/bootdev/4_functions"
 	structs "github.com/julillermo/Learning-Go/bootdev/5_structs"
 	interfaces "github.com/julillermo/Learning-Go/bootdev/6_interfaces"
+	errors "github.com/julillermo/Learning-Go/bootdev/7_errors"
 )
 
 func main() {
@@ -31,4 +32,7 @@ func main() {
 
 	fmt.Println("")
 	interfaces.InterfacesMain()
+
+	fmt.Println("")
+	errors.ErrorsMain()
 }
