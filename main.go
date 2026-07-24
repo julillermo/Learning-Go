@@ -11,6 +11,7 @@ import (
 	interfaces "github.com/julillermo/Learning-Go/bootdev/6_interfaces"
 	errors "github.com/julillermo/Learning-Go/bootdev/7_errors"
 	loops "github.com/julillermo/Learning-Go/bootdev/8_loops"
+	slices "github.com/julillermo/Learning-Go/bootdev/9_slices"
 )
 
 func main() {
@@ -39,4 +40,7 @@ func main() {
 
 	fmt.Println("")
 	loops.LoopsMain()
+
+	fmt.Println("")
+	slices.SlicesMain()
 }
