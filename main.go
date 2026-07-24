@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	maps "github.com/julillermo/Learning-Go/bootdev/10_maps"
 	variables "github.com/julillermo/Learning-Go/bootdev/1_variables"
 	constantsandformatting "github.com/julillermo/Learning-Go/bootdev/2_constants_and_formatting"
 	conditionals "github.com/julillermo/Learning-Go/bootdev/3_conditionals"
@@ -43,4 +44,7 @@ func main() {
 
 	fmt.Println("")
 	slices.SlicesMain()
+
+	fmt.Println("")
+	maps.MapsMain()
 }
