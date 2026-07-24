@@ -5,9 +5,10 @@ import (
 
 	variables "github.com/julillermo/Learning-Go/bootdev/1_variables"
 	constantsandformatting "github.com/julillermo/Learning-Go/bootdev/2_constants_and_formatting"
-	conditionals "github.com/julillermo/Learning-Go/bootdev/3_Conditionals"
+	conditionals "github.com/julillermo/Learning-Go/bootdev/3_conditionals"
 	functions "github.com/julillermo/Learning-Go/bootdev/4_functions"
-	structs "github.com/julillermo/Learning-Go/bootdev/5_Structs"
+	structs "github.com/julillermo/Learning-Go/bootdev/5_structs"
+	interfaces "github.com/julillermo/Learning-Go/bootdev/6_interfaces"
 )
 
 func main() {
@@ -27,4 +28,7 @@ func main() {
 
 	fmt.Println("")
 	structs.StructsMain()
+
+	fmt.Println("")
+	interfaces.InterfacesMain()
 }
