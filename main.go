@@ -4,8 +4,9 @@ import (
 	"fmt"
 
 	maps "github.com/julillermo/Learning-Go/bootdev/10_maps"
+	pointers "github.com/julillermo/Learning-Go/bootdev/11_pointers"
 	variables "github.com/julillermo/Learning-Go/bootdev/1_variables"
-	constantsandformatting "github.com/julillermo/Learning-Go/bootdev/2_constants_and_formatting"
+	constantsAndFormatting "github.com/julillermo/Learning-Go/bootdev/2_constants_and_formatting"
 	conditionals "github.com/julillermo/Learning-Go/bootdev/3_conditionals"
 	functions "github.com/julillermo/Learning-Go/bootdev/4_functions"
 	structs "github.com/julillermo/Learning-Go/bootdev/5_structs"
@@ -22,7 +23,7 @@ func main() {
 	variables.VariablesMain()
 
 	fmt.Println("")
-	constantsandformatting.ConstantsFormatMain()
+	constantsAndFormatting.ConstantsFormatMain()
 
 	fmt.Println("")
 	conditionals.ConditionalsMain()
@@ -47,4 +48,7 @@ func main() {
 
 	fmt.Println("")
 	maps.MapsMain()
+
+	fmt.Println("")
+	pointers.PointersMain()
 }
