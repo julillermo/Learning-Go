@@ -5,6 +5,7 @@ import (
 
 	maps "github.com/julillermo/Learning-Go/bootdev/10_maps"
 	pointers "github.com/julillermo/Learning-Go/bootdev/11_pointers"
+	channels "github.com/julillermo/Learning-Go/bootdev/13_channels"
 	variables "github.com/julillermo/Learning-Go/bootdev/1_variables"
 	constantsAndFormatting "github.com/julillermo/Learning-Go/bootdev/2_constants_and_formatting"
 	conditionals "github.com/julillermo/Learning-Go/bootdev/3_conditionals"
@@ -51,4 +52,7 @@ func main() {
 
 	fmt.Println("")
 	pointers.PointersMain()
+
+	fmt.Println("")
+	channels.ChannelsMain()
 }
