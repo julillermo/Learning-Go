@@ -1,0 +1,5 @@
+package generics
+
+func GenericsMain() {
+
+}
