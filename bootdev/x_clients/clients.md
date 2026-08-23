@@ -63,8 +63,6 @@ import (
     "encoding/json"
 )
 
-// struct for JSON
-// Must be expored (first leter capitalized)
 type Issue struct {
     Id          string  `json:"id"`
     Title       string  `json:"title"`

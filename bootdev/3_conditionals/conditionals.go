@@ -17,6 +17,8 @@ func ifElse() {
 }
 
 func initialIfStatement() {
+	// In Go, you're allowed to have an initial statement
+	// before using if-else logic
 	if someBool := true; someBool {
 		fmt.Println("someBool is true")
 	} else {
@@ -26,7 +28,6 @@ func initialIfStatement() {
 
 func switchStatement() {
 	// In Go, the break statement is always implied per case
-
 	someSwitchValue := "ABC"
 	switch someSwitchValue {
 	case "A":

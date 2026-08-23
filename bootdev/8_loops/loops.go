@@ -6,13 +6,14 @@ import "fmt"
 // - Go only has for loops to cover all the loops variants
 
 func classicForLoop(upper int) {
-	// You can the parts of the loop as needed
+	// You can specify/omit the parts of the loop as needed
 	// for INITIAL; CONDITION; AFTER
 	for i := 0; i < upper; i++ {
 		fmt.Println(i)
 	}
 
 	// The `continue` and `break` keywords are also available
+	// 	in go.
 }
 
 func LoopsMain() {

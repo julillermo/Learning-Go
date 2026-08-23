@@ -12,9 +12,10 @@ func ampersandAsteriskMemoryAddress() {
 	someTextPtr := &someText
 	someTextDereference := *someTextPtr
 
-	fmt.Println("variable value: ", someText)
-	fmt.Println("variable address: ", someTextPtr)
-	fmt.Println("variable dereference: ", someTextDereference)
+	fmt.Println("[variable value] \tsomeText: ", someText)
+	fmt.Println("[variable address] \tsomeTextPtr := &someText: ", someTextPtr)
+	fmt.Println("[variable dereference] \tsomeTextDereference := *someTextPtr: ", someTextDereference)
+	fmt.Println()
 }
 
 func userPointersToPassByReference(
@@ -32,6 +33,7 @@ func twoVarsPointSameLocInMemory() {
 	var x int = 50
 	var y *int = &x
 	*y = 100
+	// both become 100
 }
 
 func checkNilPointerB4Dereference(someStringPtr *string) {
@@ -63,7 +65,7 @@ func PointersMain() {
 
 	someStringValue := "mew mew mew"
 	userPointersToPassByReference(&someStringValue) // note you can't simple pass the address string
-	fmt.Println("Value for the modified text inside pass by ref function: ", someStringValue)
+	fmt.Println("Check whether contents have been modified (access original value): ", someStringValue)
 
 	twoVarsPointSameLocInMemory()
 	checkNilPointerB4Dereference(&someStringValue)

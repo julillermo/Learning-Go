@@ -3,7 +3,7 @@ package constantsandformatting
 import "fmt"
 
 /* NOTES
-- Constants must be declared the explicit way instead of using ;= operator
+- Constants must be declared the explicit way instead of using := operator
 */
 
 func declareConstant() {
@@ -19,7 +19,7 @@ func computedConstant() {
 }
 
 func stringTemplateFormatting() {
-	// Use `Srpintf()` to generate a formated string
+	// Use `Srpintf()` to generate a formated string and return the result
 	// Follows the C/C++ approach of string formats
 
 	// You can also just append values using "+"
@@ -33,7 +33,7 @@ func stringTemplateFormatting() {
 
 // Go stores string as a sequence of bytes.
 // Go also has the `rune` type (alias for int32) which represents a Unicode code point.
-// Go also uses UTF-8 encoding for strings, allowing use of emojis and JKC characters
+// Go also uses UTF-8 encoding for strings, allowing use of emojis and CKJ characters
 // When trying to break up a string in Go, reach for the `rune` type
 func runesAndString() {
 

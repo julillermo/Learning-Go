@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
-
+	// maps "github.com/julillermo/Learning-Go/bootdev/10_maps"
+	// pointers "github.com/julillermo/Learning-Go/bootdev/11_pointers"
+	// channels "github.com/julillermo/Learning-Go/bootdev/13_channels"
 	maps "github.com/julillermo/Learning-Go/bootdev/10_maps"
 	pointers "github.com/julillermo/Learning-Go/bootdev/11_pointers"
 	channels "github.com/julillermo/Learning-Go/bootdev/13_channels"
@@ -15,6 +17,12 @@ import (
 	errors "github.com/julillermo/Learning-Go/bootdev/7_errors"
 	loops "github.com/julillermo/Learning-Go/bootdev/8_loops"
 	slices "github.com/julillermo/Learning-Go/bootdev/9_slices"
+	// functions "github.com/julillermo/Learning-Go/bootdev/4_functions"
+	// structs "github.com/julillermo/Learning-Go/bootdev/5_structs"
+	// interfaces "github.com/julillermo/Learning-Go/bootdev/6_interfaces"
+	// errors "github.com/julillermo/Learning-Go/bootdev/7_errors"
+	// loops "github.com/julillermo/Learning-Go/bootdev/8_loops"
+	// slices "github.com/julillermo/Learning-Go/bootdev/9_slices"
 )
 
 func main() {

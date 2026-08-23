@@ -5,10 +5,11 @@ import "fmt"
 /* How I understand it */
 // - Interfaces are like "shapes" or "forms" that a struct may or may not
 //		adhere to.
-// - They like templates that YOU have to build toward piece by piece
-// - Once a struct is of this "shape" or "form", it can become a sort of
-//		type-check of sorts
+// - They're like templates that YOU have to build toward piece by piece
+// - Once a struct is of this "shape" or "form", it can become a type-check of sorts
 
+// Golang interfaces only contain methods.
+// They can't have key-value pairs
 type languageWithPackageManager interface {
 	showPackageManager() string
 }
@@ -23,6 +24,8 @@ type python struct {
 	programmingLanguage
 }
 
+// By adding showPackageManager method,
+// python-struct now adheres to languageWithPackageManager
 func (p python) showPackageManager() string {
 	return "uv"
 }
@@ -40,6 +43,8 @@ type javaScript struct {
 	programmingLanguage
 }
 
+// By adding showPackageManager method,
+// javascript-struct now adheres to languageWithPackageManager
 func (js javaScript) showPackageManager() string {
 	return "npm"
 }
@@ -56,6 +61,8 @@ type rust struct {
 	programmingLanguage
 }
 
+// By adding showPackageManager method,
+// rust-struct now adheres to languageWithPackageManager
 func (r rust) showPackageManager() string {
 	return "cargo"
 }
@@ -77,6 +84,10 @@ func triggerInterfaceMethod(langName string, pl languageWithPackageManager) {
 }
 
 func triggerInterfaceMethodTypeAssertion(pl languageWithPackageManager) {
+	// We can use the INTERFACE to determine what specific
+	// 	struct it is.
+	// The succeeding triggerInterfaceMethodTypeSwitch() func handles
+	// 	this is a more elegant way
 	pkgManager := pl.showPackageManager()
 
 	var printTxt string

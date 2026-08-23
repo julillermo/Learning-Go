@@ -12,26 +12,33 @@ type errorCustom interface {
 }
 
 // In Go, errors are values that get passed around, and
-// you're forced to handle them
+// you're forced to handle them.
 
+// Take note of how the return value is stated (string, error)
 func canThrowError(throw bool) (string, error) {
 	if throw {
 		nilString := ""
+		// You must import the `errors` package to create a new error
 		throwError := errors.New("intentionally thrown error")
 		return nilString, throwError
 	} else {
 		correctString := "correctString value"
+		// Return `nil` in place of the error when no error is encountered
 		return correctString, nil
 	}
 }
 
 func handlingFnsThatThrow(boolValue bool) {
+	// Common syntax for catching errors
 	strValue, err := canThrowError(boolValue)
 	if err != nil {
 		fmt.Println("error was handled")
 	} else {
 		fmt.Println("strValue Check: ", strValue)
 	}
+	// I think it would be best to hover over the func
+	// 	in an IDE to know whether it can or cannot throw
+	// The compilier/linter will likely warn you anyqway
 }
 
 /* Custom Error struct */

@@ -7,9 +7,10 @@ import (
 )
 
 // Generally similar to JS-Objects and Python-Dictionaries.
+// A big point of understanding in go, from what I can tell
 
 func basicStructDeclaration() {
-
+	// Struct declaration
 	type store struct {
 		classification string
 		owners         []string
@@ -18,7 +19,8 @@ func basicStructDeclaration() {
 		pastries       []string
 		landArea       float64
 	}
-
+	// Example of declaring a struct
+	// 	Notice that go uses curly brackes for declaring lists
 	houseSweet := store{
 		classification: "cafe",
 		owners:         []string{"CG", "DC"},
@@ -30,29 +32,31 @@ func basicStructDeclaration() {
 
 	fmt.Println("reflect.TypeOf(houseSweet):", reflect.TypeOf(houseSweet))
 	fmt.Println("houseSweet:", houseSweet)
-
-	fmt.Println("")
+	fmt.Println()
 
 	// nested struct
 	type buildingSpace struct {
 		owners []string
-		stores []store
+		stores []store // store is a struct
 		rent   float64
 	}
 
 	georgeBuilding := buildingSpace{
-		stores: []store{houseSweet},
+		stores: []store{houseSweet}, // could also declare everything in-line
 		rent:   123.0,
 	}
 
 	// Assigning values within a struct (similar to JS-Obj & Python-Dict)
+	// 	Notice that the types is explicit for a list
 	georgeBuilding.owners = []string{"Christopher Nolan"}
 
 	fmt.Println("reflect.TypeOf(georgeBuilding):", reflect.TypeOf(georgeBuilding))
 	fmt.Println("georgeBuilding:", georgeBuilding)
+	fmt.Println()
 }
 
 func anonymousStructs() {
+	// Declaring the struct in-line (a lot like TypeScript)
 	someMusicAlbum := struct {
 		producers        []string
 		artists          []string
@@ -65,6 +69,7 @@ func anonymousStructs() {
 		parentalAdvisory: false,
 	}
 
+	// Instead of the struct name, the struct details are printed
 	fmt.Println("reflect.TypeOf(anonymouseStruct):", reflect.TypeOf(someMusicAlbum))
 	fmt.Println("anonymouseStruct someMusicAlbum:", someMusicAlbum)
 }
@@ -79,8 +84,8 @@ func embeddedStructs() {
 	}
 
 	type robot struct {
-		jetpack
-		pilot string
+		jetpack // embedded struct
+		pilot   string
 	}
 
 	superRobot := robot{

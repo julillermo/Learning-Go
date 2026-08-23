@@ -7,16 +7,18 @@ func acceptingParams(arg1 int, arg2 string) {
 }
 
 func multipleParameterSameType(arg1, arg2 int, arg3 string) {
+	// Function argumens can share the same type declaration
 	fmt.Println("arg1:", arg1, " ", "arg2:", arg2, " ", "arg3:", arg3)
 }
 
 /* Passing by Value
-- Unless the following datatypes, Go always passes by value into a function:
+- Unless the using he following datatypes, Go always passes by value into a function:
 	- slices
 	- pointers
 	- maps
 	- channels
 	- intefaces
+	I think this my also generally be true of other programming languages?
 - This also means that Go functoins can't mutate if not any of the above datatypes
 */
 
@@ -25,19 +27,23 @@ func ignoreReturnValue() (string, string) {
 }
 
 func namedReturnValues() (firstValue, secondValue string) {
+	// You can name the return value ahead of time.
+	// If so, you're don't have to specify them in the return line
 	firstValue = "Hello"
 	secondValue = "World"
 	return
 }
 
 func explicitNamedReturnValues() (firstValue, secondValue string) {
+	// You may still indicate the return values at the end if you want
 	firstValue = "Hello"
 	secondValue = "World"
 	return firstValue, secondValue
 }
 
 /* Early returns
-- Like other languages, Go can have an early return in a function
+- Like other languages, Go can have an early return in a function.
+	Useful for early eject when error detected.
 */
 
 func passingFunctionsAsParameters(
@@ -53,6 +59,7 @@ func combine2Strings(str1, str2 string) string {
 }
 
 func usingAnonymousFunctions() {
+	// Here were passing a nameless function as an argument
 	varUsingAnonymousFunc := passingFunctionsAsParameters(
 		"Hello",
 		"World",
@@ -72,8 +79,8 @@ func saveAnonymousFunctionToVariable() {
 }
 
 /* Using Defers
-- Like in HTML, you use use DEFER to delay the execution of a function
-	until the surrounding function returns
+- Like in HTML, you use DEFER to delay the execution of a function.
+	These run AFTER the return statement is evaluated but before a value is returned
 - This is useful for closing files and database connections.
 */
 
@@ -83,7 +90,7 @@ func saveAnonymousFunctionToVariable() {
 */
 
 func closuresConcept() func(int) int {
-	// Returning a function the refers to a variable in the original scope
+	// Returning a function that refers to a variable in the original scope
 	// 	keeps that variable accessible from that function
 	var sum int = 0
 	return func(x int) int {

@@ -21,9 +21,10 @@ rune // alias for int32 (represents a Unicode code point)
 */
 
 func variables_1() {
-	// the sad way
+	// the sad way (declare before assigning value)
 	var value int
 	value = 10
+
 	fmt.Println("value is: ", value)
 }
 

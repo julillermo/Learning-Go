@@ -4,10 +4,10 @@ import "fmt"
 
 /* Notes MAPS */
 // - Maps are more akin to JS-Obj's (more so than structs?)
-//		- It seems that structs were more closer to types that can have functions
+//		- It seems that structs were more closer to TypeScript types that can have functions
 // 		- In a way you can implement structs/interfaces using maps???
 //		- You can't dynamically add a field after declaration for structs
-// - Created using the make()  function
+// - Created using the make() function
 
 // - Structs access using `.` ex. user.Name
 // - Maps access using `[key]` ex. ages["personA"]
@@ -56,6 +56,7 @@ func how2CreateAMap() {
 	fmt.Println("map using struct as type: ", fightingCharacterC)
 
 	fmt.Println("get length of keys of a map len(fightingCharacterB): ", len(fightingCharacterC))
+	fmt.Println()
 }
 
 func workingWithMaps() {
@@ -77,6 +78,7 @@ func workingWithMaps() {
 	fmt.Println("check whether a key exists 'elem, ok := someMap[key1]': ", ok1)
 	_, ok10 := someMap["key10"]
 	fmt.Println("check whether a key exists 'elem, ok := someMap[key10]': ", ok10)
+	fmt.Println()
 }
 
 func nestedMaps() {

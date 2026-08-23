@@ -1,10 +1,10 @@
 # Notes
 
-Typically the package name (ex. `package packagesmodules`) aligns with the
+Typically, the package name (ex. `package packagesmodules` at the start of a file) aligns with the
 directory name.
 
-The name isn't strict, but all `.go` files in the folder must have the same
-starting line. Otherwise, there will be an error?
+The name isn't strict, but ALL `.go` files in the folder must have the same
+starting line. Otherwise, there will be an error / behave unexpectedly
 
 The `package main` is compiled as an executable.
 All other package names (not `main`) are library packages (no entry point)
@@ -14,4 +14,4 @@ by following the directory.
 
 # MODULES
 
-All source files within the same folder have access to each other (no import needed).
+All source files within the same folder have access to each other (no import needed). Just make sure to capitalize the variables and functions you want to be accessible in other files.
