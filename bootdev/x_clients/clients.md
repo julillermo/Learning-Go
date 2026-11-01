@@ -96,7 +96,7 @@ func getIssues(url string) ([]Issue, error) {
 
 ```golang
 ...
-// I believe this first puts it into memory
+// I believe this first puts it into memory to get []byte data
 data, err := io.ReadAll(res.Body)
 if err != nil {
     // handle error
